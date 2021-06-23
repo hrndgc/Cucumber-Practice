@@ -1,7 +1,7 @@
-Feature: US1008_Koala Resort Negative Login
+Feature: US1008_Koala Resort Negative Login Coklu
 
   @dip
-  Scenario Outline: TC13_kullanici gecersiz bilgilerle giris yapamaz
+  Scenario Outline: TC13_kullanici farklı gecersiz bilgilerle giris yapamaz
 
     Given kullanici "kr_url" sayfasina gider
     Then Log in yazisina tiklar

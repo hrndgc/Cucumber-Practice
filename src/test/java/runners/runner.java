@@ -6,12 +6,14 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        plugin={"html:target\\cucumber-reports.html"},
+        plugin={"html:target\\cucumber-reports.html", "json:target/json-reports/cucumber.json",
+                "junit:target/xml-report/cucumber.xml"},
+
         //Bu notasyon ile feature dosyaları ile stepdefinition dasyalarını birlestirdik
         features="src/test/resources/features",
         glue="stepdefinitions",
 
-        tags="@dip", //work in progress
+        tags="@sip", //work in progress
         //Birden fazla scenario yu da tags="@smoke and @miniregression" yazarak calıstırabiliriz
         //Eger tum TC leri calıstırmak ıstersek tags'ı yorum satırına almamız yeterlidir
 
