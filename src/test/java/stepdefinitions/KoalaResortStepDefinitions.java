@@ -34,4 +34,21 @@ public class KoalaResortStepDefinitions {
         Assert.assertEquals(ConfigReader.getProperty("kr_basarili_giris_url"), Driver.getDriver().getCurrentUrl());
     }
 
+    @Then("kullanıcı ismi olarak {string} girer")
+    public void kullanıcı_ismi_olarak_girer(String userName) {
+        koalaResortPage.userTextBox.sendKeys(ConfigReader.getProperty(userName));
+    }
+
+    @Then("kullnıcı password olarak {string} girer")
+    public void kullnıcı_password_olarak_girer(String password) {
+        koalaResortPage.passwordTextBox.sendKeys(ConfigReader.getProperty(password));
+
+    }
+
+    @Then("sayfaya giris yapılmadigini kontrol eder")
+    public void sayfaya_giris_yapılmadigini_kontrol_eder() {
+        Assert.assertTrue(koalaResortPage.girilemediYazisi.isDisplayed());
+    }
+
+
 }

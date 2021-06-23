@@ -11,7 +11,7 @@ import org.junit.runner.RunWith;
         features="src/test/resources/features",
         glue="stepdefinitions",
 
-        tags="@wip", //work in progress
+        tags="@dip", //work in progress
         //Birden fazla scenario yu da tags="@smoke and @miniregression" yazarak calıstırabiliriz
         //Eger tum TC leri calıstırmak ıstersek tags'ı yorum satırına almamız yeterlidir
 

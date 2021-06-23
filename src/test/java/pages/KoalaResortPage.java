@@ -23,4 +23,7 @@ public class KoalaResortPage {
     @FindBy(id = "btnSubmit")
     public WebElement loginButonu;
 
+    @FindBy (id = "divMessageResult")
+    public WebElement girilemediYazisi;
+
 }
